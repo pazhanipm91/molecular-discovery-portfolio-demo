@@ -782,7 +782,8 @@
                 </button>
               </div>
               <button class="run-button" id="preview-button" type="button">
-                <span aria-hidden="true">↻</span> Preview sample result
+                <span aria-hidden="true">↻</span>
+                <span id="preview-button-label">Preview sample result</span>
               </button>
             </div>
 
@@ -900,6 +901,7 @@
 
       const candidateButtons = document.querySelectorAll("[data-candidate]");
       const previewButton = document.querySelector("#preview-button");
+      const previewButtonLabel = document.querySelector("#preview-button-label");
       const resultTitle = document.querySelector("#result-title");
       const resultStatus = document.querySelector("#result-status");
 
@@ -926,7 +928,8 @@
         document.querySelector("#metric-index").textContent = index;
         document.querySelector("#metric-acceptors").textContent = acceptors;
         document.querySelector("#metric-heuristic").textContent = heuristic;
-        resultStatus.textContent = "Illustrative sample";
+        resultStatus.textContent = "Preview updated";
+        previewButtonLabel.textContent = "Sample preview loaded";
       });
     </script>
   </body>
